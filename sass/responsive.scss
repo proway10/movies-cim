@@ -88,6 +88,23 @@ $backdropPosterWidth: (270 * $backdropBaseHeight * 2)/400;
         padding-bottom: 20px;
     }
     
+    %top-btns-common{
+        width: 30px;
+        height: 30px;
+        top: 6%;
+    }
+
+    .back-to-home{
+        background-size: contain;
+        left: 3%;        
+        @extend %top-btns-common;
+    }
+
+    #delete-movie{
+        left: 11%;
+        background-size: 13px;
+        @extend %top-btns-common;
+    }
 
 }
 

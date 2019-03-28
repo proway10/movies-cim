@@ -58,6 +58,22 @@
     padding-top: 20px;
     padding-bottom: 20px;
   }
+
+  #delete-movie, .back-to-home {
+    width: 30px;
+    height: 30px;
+    top: 6%;
+  }
+
+  .back-to-home {
+    background-size: contain;
+    left: 3%;
+  }
+
+  #delete-movie {
+    left: 11%;
+    background-size: 13px;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1440px) {
   .backdrop-wrapper {
