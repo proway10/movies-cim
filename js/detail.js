@@ -1,6 +1,6 @@
 let url_string = window.location.href; 
 let url = new URL(url_string);
-let id = url.searchParams.get("id");
+let id = localStorage.getItem('clicked-id');
 let apiURL = 'https://backend-ygzsyibiue.now.sh/api/v1/movies/' + id;
 
 /* Delete Movie */

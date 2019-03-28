@@ -1,20 +1,11 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
-#RewriteCond %{REQUEST_FILENAME} !-f
 
-#RewriteRule ^([^-]*)\_$ /detail.html?slug=$1 [L] 
- 
+# without ID
+RewriteRule ^movie/([^/]*)$ /detail.html?slug=$1 [L]
 
-# remove trailing slash
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^/]+)/$ http://searchgroups.in/$1 [R=301,L]
+#with ID
+#RewriteRule ^movie/([^/]*)/([^/]*)$ /detail.html?slug=$1&id=$2 [L]
 
-# Redirect external .html requests to extensionless url
-RewriteCond %{THE_REQUEST} ^(.+)\.html([#?][^\ ]*)?\ HTTP/
-RewriteRule ^(.+)\.html$ http://searchgroups.in/$1 [R=301,L]
-
-# Resolve .html file for extensionless html urls
-RewriteRule ^([^/.]+)$ $1.html[L]
- 
 
 </IfModule>
