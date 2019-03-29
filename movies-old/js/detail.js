@@ -1,9 +1,7 @@
 let url_string = window.location.href; 
 let url = new URL(url_string);
-let id = getID(url_string);
+let id = url.searchParams.get("id");
 let apiURL = 'https://backend-ygzsyibiue.now.sh/api/v1/movies/' + id;
-
-
 
 /* Delete Movie */
 $(function(){
@@ -12,11 +10,7 @@ $(function(){
     })  
 })
 
-function getID(url){
-    var arrayURL = url.split("-"); 
-    var id = arrayURL[arrayURL.length - 1]; 
-    return id;
-}
+
 
 
 
